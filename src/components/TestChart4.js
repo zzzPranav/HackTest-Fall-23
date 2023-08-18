@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {Text} from 'react-native';
 import * as V from 'victory';
 import {Card} from "react-native-elements";
 
@@ -17,7 +17,7 @@ export default class TestChart4 extends React.Component {
         return (
             <>
                 <Card>
-                    <Text>Test3</Text>
+                    <Text>Test4</Text>
                     <V.VictoryChart domainPadding={20}>
                         <V.VictoryLine data={this.visualizationData}  interpolation={'linear'} />
                     </V.VictoryChart>
@@ -26,9 +26,3 @@ export default class TestChart4 extends React.Component {
         )
     }
 }
-
-const chart1Styles = StyleSheet.create({
-    base: {
-        maxHeight: "50vh"
-    }
-})

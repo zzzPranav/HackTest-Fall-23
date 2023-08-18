@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {Text} from 'react-native';
 import * as V from 'victory';
 import {Card} from "react-native-elements";
 
@@ -24,9 +24,3 @@ export default class TestChart2 extends React.Component {
         )
     }
 }
-
-const chart1Styles = StyleSheet.create({
-    base: {
-        maxHeight: "50vh"
-    }
-})
