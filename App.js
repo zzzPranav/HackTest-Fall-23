@@ -5,29 +5,35 @@ import TestChart2 from "./src/components/TestChart2";
 import TestChart3 from "./src/components/TestChart3";
 import TestChart4 from "./src/components/TestChart4";
 
-
 export default function App() {
     return (
-        <>
-            <Text style={{width: '100%', textAlign: 'center', maxHeight:'2vh'}}>Hackathon Sample</Text>
-            <View style={styles.container}>
-                <TestChart1 style={styles.container}/>
-                <TestChart2 style={styles.container}/>
-                <TestChart3 style={styles.container}/>
-                <TestChart4 style={styles.container}/>
+        <View style={styles.container}>
+            <View style={styles.container1}>
+                <TestChart1 style={styles.flexItem}/>
+                <TestChart2 style={styles.flexItem}/>
             </View>
-        </>
+            <View style={styles.container1}>
+                <TestChart3 style={styles.flexItem}/>
+                <TestChart4 style={styles.flexItem}/>
+            </View>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%',
         flex: 1,
-        flexDirection: "row",
-        flexWrap: "wrap",
-        backgroundColor: '#fff',
-        alignItems: 'center',
+        flexDirection: 'column',
         justifyContent: 'space-around',
     },
+    container1: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+    },
+    flexItem: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+    }
 });
