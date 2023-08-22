@@ -12,11 +12,17 @@ export default class TestChart2 extends React.Component {
     ]
 
     render() {
+        var myTotal = 0;
+        this.visualizationData.forEach((element) => myTotal += element.y);
+
         return (
             <>
                 <Card>
                     <Text>Test2</Text>
                     <V.VictoryPie
+                        labels={(datapoint) => {
+                            return datapoint.datum.x + '\n' + Math.round((datapoint.datum.y / myTotal)*100) + '%'
+                        }}
                         data={this.visualizationData}
                     />
                 </Card>
